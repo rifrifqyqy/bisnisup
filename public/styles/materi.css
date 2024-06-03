@@ -1,0 +1,189 @@
+.breadcrumb {
+  li.breadcrumb-item {
+    a {
+      color: var(--b100);
+      text-decoration: none;
+    }
+
+    &.active {
+      color: var(--y300);
+    }
+  }
+}
+.materi-list {
+  max-width: fit-content;
+}
+.accordion-button {
+  font-size: 20px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+aside .accordion-item .accordion-collapse .accordion-body {
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+aside {
+  height: fit-content;
+  border: 1px solid var(--n50);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid var(--b100);
+  appearance: none;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+
+  &:checked {
+    background-color: var(--b300);
+    border-color: var(--b300);
+
+    + .form-check-label {
+      color: var(--y300);
+    }
+  }
+}
+.list-group-item {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 30px);
+  width: 100%;
+  background-color: transparent;
+  border: none;
+
+  input {
+    background-color: transparent;
+  }
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #fff;
+  color: #000;
+}
+
+/* right content */
+
+main {
+  article {
+    .imgheader {
+      border-radius: 12px;
+      aspect-ratio: 5/2;
+      -webkit-border-radius: 12px;
+      -moz-border-radius: 12px;
+      -ms-border-radius: 12px;
+      -o-border-radius: 12px;
+    }
+    .content-materi {
+      .tab-header {
+        .tab-item {
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          background-color: var(--b50);
+          border-radius: 8px 8px 0 0;
+          padding: 8px 16px;
+          -webkit-border-radius: 8px 8px 0 0;
+          -moz-border-radius: 8px 8px 0 0;
+          -ms-border-radius: 8px 8px 0 0;
+          -o-border-radius: 8px 8px 0 0;
+          &.active {
+            background-color: #fff;
+          }
+          &:not(.active):hover {
+            background-color: var(--n30);
+          }
+        }
+      }
+      .tab-content {
+        max-height: fit-content;
+        padding:  24px;
+        border-radius: 16px;
+        box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.08);
+        background-color: var(--n0);
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+
+        .tab-pane {
+          height: 100%;
+          display: none;
+
+          &.active {
+            display: block;
+          }
+          h1 {
+            font-size: 20px;
+            font-weight: 700;
+          }
+          .qna-input {
+            justify-content: space-between;
+            input {
+                background-color: var(--n30);
+                padding: 8px 16px;
+            }
+            button {
+                background-color: var(--b300);
+                color: var(--n0);
+                padding: 4px 16px;
+                font-weight: 700;
+                &:hover {
+                    opacity: 90%;
+                }
+                &:active {
+                    background-color: var(--b200);
+                }
+            }
+          }
+          .user-profile {
+            width: 48px;
+            height: 48px;
+          }
+          article {
+            box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+            .ulasan {
+                line-height: 100%;
+                h1 {
+                    font-size: 16px;
+                    
+                    span {
+                        font-size: 10px;
+                        font-weight: 500;
+                        color: var(--b100);
+                    }
+                }
+                a {
+                  font-size: 14px;
+                  color: var(--y300);
+                  cursor: pointer;
+                  text-decoration: underline;
+                }
+            }
+          }
+          .dropdown {
+            button {
+              width: 180px;
+             
+            }
+          }
+        }
+      }
+    }
+  }
+}
+/* right konten end */

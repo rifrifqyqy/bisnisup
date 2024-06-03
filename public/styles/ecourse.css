@@ -1,0 +1,232 @@
+* {
+  box-sizing: border-box;
+}
+
+.banner-course {
+  width: 100%;
+  height: 600px;
+  display: flex;
+
+  .banner-img {
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    filter: brightness(50%);
+    -webkit-filter: brightness(50%);
+  }
+
+  .wrap-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .title-course {
+    color: white;
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+    }
+  }
+  .price-course {
+    color: var(--y300);
+    align-items: end;
+    gap: 16px;
+
+    h1 {
+      display: flex;
+      gap: 8px;
+      align-items: start;
+      span {
+        font-size: 24px;
+      }
+    }
+
+    p {
+      color: var(--n50);
+      text-decoration: line-through;
+    }
+  }
+  .label-course {
+    display: flex;
+    gap: 32px;
+    color: white;
+    background-color: rgba(1, 1, 1, 0.5);
+    max-width: fit-content;
+    padding: 8px 24px;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    div {
+      display: flex;
+      gap: 16px;
+      p {
+        margin: auto 0;
+      }
+    }
+  }
+}
+/* banner ecourse end */
+
+/* button */
+.btn-outline {
+  padding: 8px 16px;
+  border: 2px solid var(--n0);
+  background: transparent;
+  color: var(--n0);
+  font-weight: 700;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+
+  &:hover {
+    background-color: var(--n0);
+    color: var(--b300);
+  }
+}
+.btn-fill {
+  padding: 8px 16px;
+  background-color: var(--y300);
+  color: var(--n0);
+  font-weight: 700;
+  border: 2px var(--y300) solid;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+
+  &:hover {
+    opacity: 80%;
+  }
+}
+.btn-outline2 {
+  padding: 8px 16px;
+  border: 2px solid var(--b300);
+  background: transparent;
+  color: var(--b300);
+  font-weight: 700;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+
+  &:hover {
+    background-color: var(--b300);
+    color: var(--n30);
+  }
+}
+/* button end */
+/* label skill */
+
+.label-skill {
+  padding: 4px 12px;
+  background-color: var(--n30);
+  color: var(--b100);
+  font-weight: normal;
+  max-width: fit-content;
+  font-size: 16px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* label skill end */
+
+/* section ecourse detail */
+
+section {
+  .title-head {
+    font-size: 28px;
+    font-weight: 700;
+  }
+  .content-2 {
+    display: flex;
+    flex-direction: column;
+
+    div {
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+        gap: 16px;
+        margin: 16px 0;
+      }
+    }
+  }
+  .content-4 {
+    .mentor-card {
+      background-color: var(--n0);
+      border: 1px solid var(--b300);
+      padding: 16px 24px;
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+      h1 {
+        font-size: 20px;
+        font-weight: 700;
+      }
+      p {
+        font-size: 14px;
+        color: var(--b100);
+      }
+      h5 {
+        font-weight: normal;
+        font-size: 16px;
+        color: var(--b300);
+      }
+      .linkedin {
+        color: #0A66C2 ;
+      }
+    }
+  }
+  .content-sticky {
+    position: sticky;
+    top: 130px;
+
+    .price {
+      h2 {
+        color: var(--y300);
+      }
+      p {
+        color: var(--n50);
+      }
+    }
+  }
+}
+
+/* side navigation */
+
+.side-nav {
+  background-color: #fff;
+  max-width: fit-content;
+  max-height: fit-content;
+  border: 1px solid var(--b100);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.1);
+
+  h1 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--b100);
+    margin: 0 16px;
+    font-size: 16px;
+    max-width: fit-content;
+
+    &:hover {
+      color: var(--y300);
+    }
+  }
+}
+

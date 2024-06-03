@@ -1,0 +1,578 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+:root {
+  --b50: #e6e6e6;
+  --b75: #979797;
+  --b100: #6c6c6c;
+  --b200: #2c2c2c;
+  --b300: #010101;
+
+  --n0: #ffffff;
+  --n10: #fafbfb;
+  --n20: #f5f6f7;
+  --n30: #ebedf0;
+  --n40: #dfe2e6;
+  --n50: #c2c7d0;
+  --n70: #b3b9c4;
+  --n80: #98a1b0;
+  --n90: #8993a4;
+  --n100: #7a8699;
+  --n200: #6b788e;
+  --n300: #5d6b82;
+  --n400: #505f79;
+  --n500: #42526d;
+  --n600: #354764;
+  --n700: #243757;
+  --n800: #15294b;
+  --n900: #091e42;
+
+  --y50: #fcf7e7;
+  --y75: #f4e09b;
+  --y100: #f0d372;
+  --y200: #e9c035;
+  --y300: #e5b30c;
+  --y400: #a07d08;
+  --y500: #8c6d07;
+}
+body {
+  background-color: var(--n10);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* swiperjs */
+.swiper {
+  position: relative;
+  width: 1500px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.pagination-wrapper {
+  display: flex;
+  margin-top: 36px;
+}
+.swiper-pagination {
+  display: flex;
+  margin-left: 40vw;
+
+  align-items: center;
+  max-width: fit-content;
+}
+.swiper-pagination-bullet-active {
+  color: #fff;
+  width: 24px;
+  height: 12px;
+  border-radius: 8px;
+  background: var(--b300);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+.swiper-button {
+  display: flex;
+
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  top: 35%;
+  left: 0;
+  right: 0;
+  z-index: 20;
+
+  .swiper-prev {
+    margin-left: -16px;
+  }
+  .swiper-next {
+    margin-right: -16px;
+  }
+}
+
+/* swiperjs end */
+
+/* navbar */
+
+nav {
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+  z-index: 999;
+}
+nav .container ul {
+  .dropdown-menu {
+    background-color: #fff;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+    .dropdown-item {
+      background-color: #fff;
+    }
+  }
+
+  li {
+    a {
+      color: var(--b300);
+      &:focus {
+        color: var(--y300);
+      }
+      &:hover {
+        background-color: var(--n30);
+      }
+    }
+
+    .dropdown-menu {
+      li a:hover {
+        background-color: var(--n30);
+      }
+    }
+  }
+}
+.form-control::placeholder {
+  color: var(--b300);
+}
+
+.form-control[type="search"]::-webkit-search-cancel-button {
+  stroke: black !important; /* Ganti dengan warna yang diinginkan */
+}
+
+.form-control {
+  border: 1px solid transparent;
+  background-color: var(--n30);
+  width: 300px;
+}
+.form-control:focus {
+  border: 1px solid var(--b300);
+  background-color: var(--n30);
+}
+
+.aboutsection {
+  margin: 0 40px;
+}
+.biznisup {
+  h2 {
+    font-weight: 700;
+  }
+}
+
+.nav-tabs {
+  border: 0;
+
+  .nav-item .nav-link {
+    border: 1px solid var(--b300);
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+
+    color: var(--b300);
+  }
+  .nav-item .active,
+  .nav-item .nav-link:focus {
+    color: white;
+    background-color: var(--y300);
+    border: 1px solid var(--y300);
+  }
+}
+.icon-wrapper {
+  img:hover {
+    background-color: var(--n30);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  button {
+    font-weight: 700;
+  }
+}
+/* nav end */
+.tab-content {
+  .tab-pane {
+    height: 300px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+
+  .tab-pane .text-wrap {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 8px;
+    padding: 12px 16px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    animation-duration: 2s;
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+
+    p {
+      font-size: 14px;
+      color: var(--b100);
+    }
+  }
+  .tab-pane .text-wrap:hover {
+    border: 1px solid var(--b300);
+  }
+  .tab-pane h2 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+/* tab end */
+
+/* card */
+section .header {
+  font-size: 32px;
+  font-weight: 700;
+}
+.card-container {
+  width: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--n0);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  border: 1px solid transparent;
+  transition: all ease 300ms;
+  -webkit-transition: all ease 300ms;
+  -moz-transition: all ease 300ms;
+  -ms-transition: all ease 300ms;
+  -o-transition: all ease 300ms;
+  .course-img {
+    height: 230px;
+    object-fit: cover;
+  }
+  img {
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+  }
+  .ctg-label {
+    background-color: var(--y100);
+    padding: 5px 10px;
+    max-width: fit-content;
+    font-weight: 700;
+    color: var(--n10);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .rating-label {
+    background-color: var(--b300);
+    color: var(--n0);
+    padding: 5px 10px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    max-width: fit-content;
+    overflow: hidden;
+    border-bottom: 1px solid var(--n50);
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--b300);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    p {
+      color: var(--b100);
+    }
+    .card-desc {
+      max-height: 100px;
+      overflow-y: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+  &:hover {
+    border: 1px solid var(--b200);
+  }
+  .card-footer {
+    color: var(--b300);
+    margin-top: auto;
+    h1 {
+      color: var(--y300);
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+}
+.btn-selengkapnya {
+  max-width: fit-content;
+  align-items: center;
+  border: 1px solid var(--b300);
+  padding: 8px 16px;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+  a {
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    color: inherit;
+    margin: auto;
+    line-height: 100%;
+  }
+  &:hover {
+    color: var(--n0);
+    background-color: var(--b300);
+    svg {
+      stroke: var(--n0);
+    }
+  }
+  svg {
+    stroke: var(--b300);
+    fill: none;
+  }
+}
+/* card end */
+/* accordion */
+.faq {
+  h2 {
+    font-weight: 700;
+  }
+  p {
+    font-size: 20px;
+    color: var(--b100);
+  }
+}
+.accordion {
+  .accordion-item {
+    .accordion-header {
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+
+      .accordion-button {
+        border: 1px solid transparent;
+        font-weight: 700;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        padding: 16px 20px;
+        transition: all 500ms;
+        -webkit-transition: all 500ms;
+        -moz-transition: all 500ms;
+        -ms-transition: all 500ms;
+        -o-transition: all 500ms;
+      }
+      .accordion-button:hover {
+        border: 1px solid var(--b300);
+      }
+
+      .accordion-button:focus {
+        background: transparent;
+      }
+    }
+  }
+  .accordion-collapse {
+    .accordion-body {
+      background-color: var(--n30);
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+    }
+  }
+}
+/* accordion end */
+
+/* hubungi kami */
+
+.mailto {
+  max-width: fit-content;
+  padding: 24px;
+  margin: 0px auto;
+  border-radius: 16px;
+  background: linear-gradient(89deg, #e5b30c -0.46%, #f0d372 97.08%);
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+  gap: 170px;
+
+  h1 {
+    font-size: 24px;
+    color: var(--n0);
+    text-wrap: nowrap;
+  }
+
+  .mailto-button {
+    padding: 10px 16px;
+    background-color: var(--b300);
+    color: var(--n0);
+    border-radius: 28px;
+    -webkit-border-radius: 28px;
+    -moz-border-radius: 28px;
+    -ms-border-radius: 28px;
+    -o-border-radius: 28px;
+
+    p {
+      margin: auto 0;
+      font-weight: 700;
+      text-wrap: nowrap;
+    }
+  }
+}
+
+/* hubungi kami end */
+
+/* footer */
+
+footer {
+  background-color: var(--b300);
+
+  h6 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+/* footer end */
+
+/* <<<<< el resposif >>>>> */
+
+@media (max-width: 768px) {
+  /* swiper carousel */
+
+  .swiper {
+    width: 360px;
+    height: 200px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+  }
+  .swiper-button {
+    top: 29%;
+
+    .swiper-prev {
+      margin-left: -24px;
+    }
+    .swiper-next {
+      margin-right: -24px;
+    }
+  }
+  /* swiper carousel end */
+  /* about section */
+  .about-img {
+    width: 50%;
+  }
+  .biznisup {
+    h2 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+  .nav-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    height: max-content;
+    padding: 4px 0;
+
+    .nav-item {
+      flex: 0 0 auto;
+      .nav-link {
+        font-size: 12px;
+      }
+    }
+  }
+  .tab-content {
+    .tab-pane {
+      p {
+        font-size: 14px;
+      }
+      .text-wrap {
+        gap: 16px;
+        padding: 8px;
+
+        img{
+          width: 32px;
+        }
+        div {
+          h2 {
+            font-size: 16px;
+          }
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  /* about section end */
+
+
+/* card section */
+.card-container {
+  width: 200px;
+  padding: 8px;
+}
+
+
+
+
+/* card section end */
+
+
+  /* hubungi kami */
+  .mailto {
+    width: 320px;
+    padding: 14px;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: start;
+
+    h1 {
+      font-size: 16px;
+    }
+
+    .mailto-button {
+      p {
+        font-size: 12px;
+      }
+      img {
+        width: 20px;
+      }
+    }
+  }
+
+  /* hubungi kami end */
+}
