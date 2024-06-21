@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="<?= base_url('styles/home.css'); ?>">
+    <link rel="stylesheet" href="<?= base_url('styles/blog.css'); ?>">
     <style>
         .custom-btn {
             --bs-btn-color: #a37202;
@@ -47,31 +48,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <form class="d-flex search-box" role="search">
-                        <i class="bi bi-search search-icon"></i>
-                        <input class="form-control text-dark me-2 rounded-5" type="search" placeholder="Cari" aria-label="Search">
-                        <!-- <button class="btn btn-outline-success" type="submit">Search</button> -->
-                    </form>
-                    <!-- <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="<?= base_url('/ecourse'); ?>">Link</a>
-                </li> -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Be Success
-                        </a>
-                        <ul class="dropdown-menu bg-white">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?= base_url('/ecourse'); ?>">Blog</a>
                     </li>
                     <li class="nav-item">
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle text-black" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Lainnya
+                            Topik Belajar
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
@@ -83,18 +66,15 @@
                         </ul>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link text-black" href="<?= base_url('/blog'); ?>">General</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?= base_url('/blog'); ?>">Cerita Sukses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-black" href="<?= base_url('/blog'); ?>">Mentor</a>
                     </li>
                 </ul>
-                <div class="icon-wrapper d-flex gap-2">
-                    <img src="<?= base_url('images/bell.svg') ?>" alt="">
-                    <img src="<?= base_url('images/cart.svg')
-                                ?>" alt="">
-                    <button type="button" class="btn btn-dark rounded-5 px-3" id="loginButton">Masuk</button>
-                    <button type="button" class="btn btn-dark rounded-circle" id="btnLoggedin">
-                        <img src="<?= base_url('images/user.svg') ?>" alt="">
-                    </button>
-                </div>
-
             </div>
         </div>
 
@@ -130,7 +110,7 @@
                     <!-- Grid column -->
 
                     <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mb-4 mb-lg-0 d-flex menu-footer">
+                    <div class="col-md-3 col-lg-2 col-xl-2 mt-3 mb-4 mb-lg-0 menu-footer">
                         <h6 class="mb-lg-4">
                             Menu
                         </h6>
@@ -190,44 +170,6 @@
 
     <script>
         const colorMenu = "text-dark"
-        document.getElementById('loginButton').addEventListener('click', function() {
-            window.location.href = '/login';
-        });
-        document.addEventListener('DOMContentLoaded', async function() {
-            // Ambil token dari penyimpanan lokal (misalnya localStorage)
-            const token = localStorage.getItem('token');
-
-            if (token) {
-                try {
-                    const response = await fetch('https://dummyjson.com/auth/me', {
-                        method: 'GET',
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            'Content-Type': 'application/json'
-                        }
-                    });
-
-                    const userData = await response.json();
-                    const loginButton = document.getElementById('loginButton');
-                    const btnLoggedin = document.getElementById('btnLoggedin');
-
-                    if (response.ok) {
-                        // Menampilkan nama pengguna di <h1>
-                        loginButton.classList.add('loggedin');
-                        btnLoggedin.classList.add('show');
-                    } else {
-                        throw new Error(userData.message || 'Failed to fetch current user');
-                    }
-
-                } catch (error) {
-                    console.error('Error fetching current user:', error);
-                    // Handle error (misalnya, tampilkan pesan kepada pengguna)
-                }
-            } else {
-                console.log('Token not found. User not authenticated.');
-                // Handle case where user is not authenticated
-            }
-        });
     </script>
 
 </body>

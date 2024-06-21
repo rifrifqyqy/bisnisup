@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?= base_url ('styles/materi.css')?>">
+<link rel="stylesheet" href="<?= base_url('styles/materi.css') ?>">
 
 <!-- <template> -->
 <section class="content-materi mt-4">
@@ -21,66 +21,96 @@
       </div>
     </div>
     <div id="tab2" class="tab-pane">
-        <main class="w-100 d-flex flex-column gap-4">
-        <div class="qna-input d-flex w-100 gap-4">
-            <input type="text" placeholder="Pertanyaan kamu..." class="w-100 rounded-2 border-0">
-           <?= $this->include('components/button/caributton'); ?>
+      <main class="w-100 d-flex flex-column gap-4">
+        <div class="qna-input d-flex w-100 gap-4 sticky-top">
+          <input type="text" placeholder="Pertanyaan kamu..." class="w-100 rounded-2 border-0">
+          <?= $this->include('components/button/caributton'); ?>
         </div>
         <section class="d-flex gap-5">
-        <div class="d-flex flex-column">
+          <div class="d-flex flex-column">
             <h1>Filter : </h1>
             <div class="dropdown">
-                <button class="btn border-1 border-black dropdown-toggle d-flex justify-content-between align-items-center" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Semua Pelajaran
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <li><a class="dropdown-item"  data-value="Action">Action</a></li>
-                    <li><a class="dropdown-item"  data-value="Another action">Another action</a></li>
-                    <li><a class="dropdown-item"  data-value="Something else here">Something else here</a></li>
-                </ul>
+              <button class="btn border-1 border-black dropdown-toggle d-flex justify-content-between align-items-center" id="dropdownMenuButton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Semua Pelajaran
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" data-value="Action">Action</a></li>
+                <li><a class="dropdown-item" data-value="Another action">Another action</a></li>
+                <li><a class="dropdown-item" data-value="Something else here">Something else here</a></li>
+              </ul>
             </div>
-        </div>
-        <div class="d-flex flex-column">
+          </div>
+          <div class="d-flex flex-column">
             <h1>Urutkan Menurut : </h1>
             <div class="dropdown">
-                <button class="btn  border-1 border-black dropdown-toggle d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" style=" width : 300px" id="dropdownMenuButton2">
-                    Terbaru
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
-                    <li><a class="dropdown-item" data-value="action">Action</a></li>
-                    <li><a class="dropdown-item" data-value="Another action">Another action</a></li>
-                    <li><a class="dropdown-item" data-value="walawe">walawe</a></li>
-                </ul>
+              <button class="btn  border-1 border-black dropdown-toggle d-flex justify-content-between align-items-center" type="button" data-bs-toggle="dropdown" aria-expanded="false" style=" width : 300px" id="dropdownMenuButton2">
+                Terbaru
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><a class="dropdown-item" data-value="action">Action</a></li>
+                <li><a class="dropdown-item" data-value="Another action">Another action</a></li>
+                <li><a class="dropdown-item" data-value="walawe">walawe</a></li>
+              </ul>
             </div>
-        </div>
+          </div>
         </section>
         <div>
-            <h1>Pertanyaan yang di-pin di modul ini</h1>
-            <article class="d-flex gap-3 align-items-start py-3 px-4 mb-2 mx-2 rounded-4">
-                <img src="<?= base_url('images/userprofile.png')?>" alt="" class="user-profile mt-2">
-                <div class="ulasan d-flex flex-column">
-                    <h1 class="d-flex align-items-center gap-2">User231
-                        <span>diunggah 13 April 2024</span>
-                    </h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi architecto temporibus maiores quisquam nam enim dolores distinctio quae, vero unde.
-                    </p>
-                    <a>
-                        Balasan (24)
-                    </a>
-                </div>
-            </article>
+          <h1>Pertanyaan yang di-pin di modul ini</h1>
+          <article class="d-flex gap-3 align-items-start py-3 px-4 mb-2 mx-2 rounded-4">
+            <img src="<?= base_url('images/userprofile.png') ?>" alt="" class="user-profile mt-2">
+            <div class="ulasan d-flex flex-column">
+              <h1 class="d-flex align-items-center gap-2">User231
+                <span>diunggah 13 April 2024</span>
+              </h1>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi architecto temporibus maiores quisquam nam enim dolores distinctio quae, vero unde.
+              </p>
+              <a>
+                Balasan (24)
+              </a>
+            </div>
+          </article>
         </div>
-    </main>
+      </main>
     </div>
     <div id="tab3" class="tab-pane">
-      <p>Konten untuk Catatan</p>
+      <div class="qna-input d-flex w-100 gap-4">
+        <input type="text" placeholder="Buat catatan baru di 15:00" class="w-100 rounded-2 border-0">
+        <button class="rounded-2 border-0">Tambah</button>
+      </div>
+      <div class="d-flex justify-content-center mt-5">
+        <p class="mx-auto">Klik buat catatan baru untuk menambahkan catatan</p>
+      </div>
+
     </div>
     <div id="tab4" class="tab-pane">
-      <p>Konten untuk Pengumuman</p>
+      <p>Tidak ada Pengumuman terbaru</p>
     </div>
     <div id="tab5" class="tab-pane">
-      <p>Konten untuk Ulasan</p>
+      <article class="d-flex gap-3 align-items-start py-3 px-4 mb-2 mx-2 rounded-4">
+        <img src="<?= base_url('images/userprofile.png') ?>" alt="" class="user-profile mt-2">
+        <div class="ulasan d-flex flex-column">
+          <h1 class="d-flex align-items-center gap-2">User231
+            <span>diunggah 13 April 2024</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi architecto temporibus maiores quisquam nam enim dolores distinctio quae, vero unde.
+          </p>
+
+        </div>
+      </article>
+      <article class="d-flex gap-3 align-items-start py-3 px-4 mb-2 mx-2 rounded-4">
+        <img src="<?= base_url('images/userprofile.png') ?>" alt="" class="user-profile mt-2">
+        <div class="ulasan d-flex flex-column">
+          <h1 class="d-flex align-items-center gap-2">User231
+            <span>diunggah 13 April 2024</span>
+          </h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi architecto temporibus maiores quisquam nam enim dolores distinctio quae, vero unde.
+          </p>
+
+        </div>
+      </article>
     </div>
   </main>
 </section>
@@ -92,8 +122,8 @@
 
 
 <script>
-  $(document).ready(function () {
-    $(".tab-item").click(function () {
+  $(document).ready(function() {
+    $(".tab-item").click(function() {
       var tab_id = $(this).attr("data-tab");
 
       $(".tab-item").removeClass("active");
@@ -105,13 +135,13 @@
   });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        document.querySelectorAll('.dropdown-item', '.dropdown-item2').forEach(function(item) {
-            item.addEventListener('click', function() {
-                var selectedText = this.textContent;
-                document.getElementById('dropdownMenuButton', '.dropdownMenuButton2').textContent = selectedText;
-            });
-        });
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.dropdown-item', '.dropdown-item2').forEach(function(item) {
+      item.addEventListener('click', function() {
+        var selectedText = this.textContent;
+        document.getElementById('dropdownMenuButton', '.dropdownMenuButton2').textContent = selectedText;
+      });
     });
+  });
 </script>
 <!-- </script> -->
